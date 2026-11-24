@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pranav – Portfolio</title>
+<meta name="description" content="Portfolio of Pranav – projects, skills and contact details.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #eef1f4;
+    --ink: #14202b;
+    --muted: #55677a;
+    --line: #c9d2db;
+    --accent: #2447d6;
+    --accent-ink: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101820;
+      --ink: #e8edf2;
+      --muted: #94a5b6;
+      --line: #263441;
+      --accent: #7f9bff;
+      --accent-ink: #101820;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; }
+
+  header.top { padding: 1.25rem 0; }
+  header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+  .brand { font-family: "Bricolage Grotesque", sans-serif; font-weight: 700; text-decoration: none; }
+  nav a { margin-left: 1.25rem; text-decoration: none; color: var(--muted); }
+  nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+
+  .hero { padding: 6rem 0 5rem; }
+  .hero h1 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 800;
+    font-size: clamp(3.2rem, 11vw, 7.5rem);
+    line-height: .95;
+    letter-spacing: -0.035em;
+    margin: 0 0 1.5rem;
+  }
+  .hero p { max-width: 34rem; font-size: 1.25rem; color: var(--muted); margin: 0 0 2rem; }
+  .btn {
+    display: inline-block;
+    padding: .75rem 1.4rem;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border-radius: 999px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); margin-left: .5rem; }
+  .btn:hover { filter: brightness(1.08); }
+
+  section { padding: 3.5rem 0; border-top: 1px solid var(--line); }
+  h2 {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+    margin: 0 0 1.5rem;
+  }
+  .about p { max-width: 38rem; margin: 0 0 1rem; }
+
+  .project {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .25rem 1.5rem;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+  }
+  .project:first-of-type { padding-top: 0; }
+  .project h3 { font-family: "Bricolage Grotesque", sans-serif; font-size: 1.35rem; margin: 0; }
+  .project:hover h3 { color: var(--accent); }
+  .project p { grid-column: 1; margin: 0; color: var(--muted); max-width: 36rem; }
+  .project .tech { grid-row: 1; grid-column: 2; color: var(--muted); font-size: .9rem; align-self: center; }
+  @media (max-width: 560px) {
+    .project { grid-template-columns: 1fr; }
+    .project .tech { grid-row: auto; grid-column: 1; }
+    nav a { margin-left: .9rem; }
+  }
+
+  .skills { display: flex; flex-wrap: wrap; gap: .6rem; padding: 0; margin: 0; list-style: none; }
+  .skills li { border: 1px solid var(--line); border-radius: 999px; padding: .3rem 1rem; }
+
+  .contact p { max-width: 34rem; }
+  .links a { display: inline-block; margin: 0 1.25rem .5rem 0; font-weight: 500; text-underline-offset: 4px; }
+  footer { padding: 2rem 0 3rem; color: var(--muted); font-size: .9rem; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Pranav</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <div class="hero">
+      <!-- EDIT: your full name and one-line intro -->
+      <h1>Pranav<br>Vichare.</h1>
+      <p>I build useful things with code. Currently learning, shipping small projects and looking for my next opportunity.</p>
+      <a class="btn" href="#projects">See my work</a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
+    </div>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <!-- EDIT: a short bio -->
+      <p>Hi, I’m Pranav. I’m a student and developer who enjoys turning ideas into working software, from small tools to full web apps.</p>
+      <p>When I’m not coding, I’m reading about new tech, contributing to open source and picking up new skills.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <!-- EDIT: replace with your real projects. Copy one <a> block per project. -->
+      <a class="project" href="https://github.com/pranavvvichare" target="_blank" rel="noopener">
+        <h3>Project one</h3>
+        <span class="tech">HTML, CSS, JavaScript</span>
+        <p>One sentence on what it does and who it helps.</p>
+      </a>
+      <a class="project" href="https://github.com/pranavvvichare" target="_blank" rel="noopener">
+        <h3>Project two</h3>
+        <span class="tech">Python</span>
+        <p>One sentence on what it does and who it helps.</p>
+      </a>
+      <a class="project" href="https://github.com/pranavvvichare" target="_blank" rel="noopener">
+        <h3>Project three</h3>
+        <span class="tech">React, Node.js</span>
+        <p>One sentence on what it does and who it helps.</p>
+      </a>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <!-- EDIT: your skills -->
+      <ul class="skills">
+        <li>HTML &amp; CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Git &amp; GitHub</li>
+        <li>React</li>
+        <li>SQL</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Have a project, internship or idea? Send me a message and I’ll reply soon.</p>
+      <div class="links">
+        <!-- EDIT: your real links -->
+        <a href="mailto:you@example.com">you@example.com</a>
+        <a href="https://github.com/pranavvvichare" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© <span id="yr"></span> Pranav. Built with plain HTML and CSS.</div>
+</footer>
+
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
